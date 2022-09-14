@@ -1,10 +1,10 @@
 {
     "start_url" : ".",
-    "name": "Web Folder Structure",
-    "short_name": "Web Folder Structure",
+    "name": "Compass",
+    "short_name": "Compass",
     "display": "standalone",
     "background_color": "#fff",
-    "description": "Web folder structure",
+    "description": "Compass",
     "theme_color": "#fff",
     "icons": [
         {

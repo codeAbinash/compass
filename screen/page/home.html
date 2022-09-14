@@ -3,6 +3,19 @@
     <script src="./screen/js/home.js"></script>
     <link rel="stylesheet" href="./screen/css/home.css">
 </head>
+
 <body>
-    <h1>Welcome to Compass</h1>
+    <div class="main">
+        <div class="top">
+            <h1>Welcome to Compass</h1>
+            <p class="txt-gray fw4 text-5"><br>To know your current location you have to allow location Permission.</p>
+        </div>
+        <img src="./image/image/compass.png" class="imgCompass">
+
+        <div class="buttons">
+            <div class="btn full-width" onclick="loadScreen('./main.html')">Grant Location Permission</div>
+            <div class="btn full-width transparent uppercase">Skip</div>
+        </div>
+    </div>
+
 </body>

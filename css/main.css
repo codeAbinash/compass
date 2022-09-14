@@ -1,11 +1,13 @@
 body {
   overflow-x: hidden;
   background-color: var(--bg);
+  color: var(--txt);
 }
 body .icon {
   width: 150px;
 }
 body #main {
+  min-height: 100vh;
   transition-duration: 200ms;
   animation-timing-function: linear;
   width: 100%;

@@ -1,0 +1,33 @@
+.btn.full-width {
+  width: 100%;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  font-weight: 500;
+  padding: 1.15rem;
+  border-radius: var(--btn-bdrs);
+  transition: 200ms;
+  letter-spacing: 0.5px;
+  margin: 10px 0;
+}
+.btn.full-width:active {
+  scale: 0.98;
+}
+
+.btn.full-width.gray {
+  background-color: #ddd;
+  color: unset;
+}
+
+.btn.full-width.transparent {
+  background-color: transparent;
+  color: black;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.0666666667);
+}
+.btn.full-width.transparent:active {
+  background-color: rgba(0, 0, 0, 0.1333333333);
+}
