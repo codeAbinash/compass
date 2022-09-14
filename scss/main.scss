@@ -1,0 +1,18 @@
+body {
+    overflow-x: hidden;
+    background-color: var(--bg);
+
+    .icon {
+        width: 150px;
+
+    }
+
+    #main {
+        transition-duration: 200ms;
+        animation-timing-function: linear;
+        // background-color: inherit;
+        width: 100%;
+        overflow-x: hidden;
+        position: relative;
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "start_url" : ".",
+    "name": "Web Folder Structure",
+    "short_name": "Web Folder Structure",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "Web folder structure",
+    "theme_color": "#fff",
+    "icons": [
+        {
+            "src": "./image/icon/icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./image/icon/icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "./image/icon/icon.png",
+            "sizes": "196x196",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
