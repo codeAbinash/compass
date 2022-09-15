@@ -15,15 +15,21 @@
             <img src="./image/image/compass-rotate.png" id="compass-circle">
         </div>
         <!--         
-        <div class="gyro">
-            <div id="x"></div>
-            <div id="y"></div>
-            <div id="z"></div>
-        </div> -->
-        <div class="location">
-            <div class="right"><span class="lat" id="lat">-</span> <span class="name">Latitude</span></div>
-            <div class="left"><span class="long" id="long">-</span> <span class="name">Longitude</span></div>
-        </div>
+            <div class="gyro">
+                <div id="x"></div>
+                <div id="y"></div>
+                <div id="z"></div>
+            </div> -->
+            <div class="loc">
+                <p class="acc" id="acc">Accuracy -</p>
+                <div class="location">
+                    <div class="right"><span class="lat" id="lat">-</span> <span class="name">Latitude</span></div>
+                    <div class="left"><span class="long" id="long">-</span> <span class="name">Longitude</span></div>
+                </div>
+                <div class="calc press" onclick="loadScreen('./start-way.html')">Calculate Your Way</div>
+            </div>
+
+
         <p class="lastLink">By Abinash. Source on <a href="https://github.com/codeAbinash/compass">Github</a>.</p>
     </div>
 </body>

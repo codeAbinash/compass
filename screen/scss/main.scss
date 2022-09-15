@@ -1,27 +1,31 @@
-.main{
+.main {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 50px 20px 20px 20px;
-    .deg{
-        p{
+
+    .deg {
+        p {
             font-size: 2rem;
             font-weight: 500;
         }
     }
-    .compass{
+
+    .compass {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        >img{
+
+        >img {
             width: 90%;
             display: block;
             margin-inline: auto;
         }
-        .dot{
+
+        .dot {
             height: 20px;
             width: 5px;
             background-color: red;
@@ -29,37 +33,69 @@
             // border-radius: ;
         }
     }
-    .location{
-        display: flex;
-        
+
+
+    .loc {
         width: 100%;
-        
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        >div{
-            flex-grow: 1;
-            // outline: 1px solid red;
-            text-align: center;
+        gap: 10px;
+
+        .acc {
+            font-weight: 500;
+            font-size: 0.7em;
+            color: limegreen;
+        }
+        >.calc {
+            background-color: #000;
+            color: white;
+            margin-top: 40px;
+            padding: 0.5em 1.1em;
+            font-weight: 500;
+            border-radius: 100vmax;
+            font-size: 0.7em;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .location {
             display: flex;
-            flex-direction: column;
-            .long,.lat{
-                font-size: 1.5em;
-                font-weight: 500;
-            }
-            span.name{
-                font-size: 0.8rem;
-                color: #888;
-                font-weight: 500;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+
+
+            >div {
+                flex-grow: 1;
+                // outline: 1px solid red;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+
+                .long,
+                .lat {
+                    font-size: 1.4em;
+                    font-weight: 500;
+                }
+
+                span.name {
+                    font-size: 0.8rem;
+                    color: #888;
+                    font-weight: 500;
+                }
             }
 
         }
     }
 
-    .lastLink{
+    .lastLink {
         font-size: 0.8rem;
         font-weight: 500;
         color: #555;
-        a{
+
+        a {
             color: dodgerblue;
         }
     }

@@ -23,19 +23,19 @@ export default function () {
     function getCompassHead(d) {
         if (d > 337 || d <= 22)
             return `N ${d}`
-        else if(d > 22 && d <= 68)
+        else if (d > 22 && d <= 68)
             return `NE ${d}`
-        else if(d > 68 && d <= 112)
+        else if (d > 68 && d <= 112)
             return `E ${d}`
-        else if(d > 112 && d <= 158 )
+        else if (d > 112 && d <= 158)
             return `SE ${d}`
-        else if(d > 158 && d <= 202)
+        else if (d > 158 && d <= 202)
             return `S ${d}`
-        else if(d > 202 && d <= 248)
+        else if (d > 202 && d <= 248)
             return `SW ${d}`
-        else if(d > 248 && d <= 292)
+        else if (d > 248 && d <= 292)
             return `W ${d}`
-        else if(d > 292 && d <= 338)
+        else if (d > 292 && d <= 338)
             return `NW ${d}`
 
         return 'N' + d
@@ -55,6 +55,7 @@ export default function () {
     // }
 
     function makeDegMinSecStr(data) {
+        data = Math.abs(data)
         let deg = parseInt(data)
         data -= deg
         data *= 60
@@ -64,9 +65,7 @@ export default function () {
         data *= 60
 
         let sec = parseInt(data)
-
         return `${deg}&deg ${min}' ${sec}''`
-
     }
 
 
@@ -74,16 +73,42 @@ export default function () {
     function getLocation() {
         const long = document.getElementById('long')
         const lat = document.getElementById('lat')
+        const acc = document.getElementById('acc')
+
+        const options = {
+            enableHighAccuracy: true,
+            timeout: 60000
+            // maximumAge: 5000
+        };
+
         if (navigator.geolocation) {
-            navigator.geolocation.watchPosition(pos => {
-                long.innerHTML = makeDegMinSecStr(pos.coords.longitude)
-                lat.innerHTML = makeDegMinSecStr(pos.coords.latitude)
-            })
+            navigator.geolocation.watchPosition(success, error, options)
         } else {
             long.textContent = '-'
             lat.textContent = '-'
             console.log("Location is not available")
         }
+
+        function success(pos) {
+            long.innerHTML = makeDegMinSecStr(pos.coords.longitude) + ' ' + EorW(pos.coords.longitude)
+            lat.innerHTML = makeDegMinSecStr(pos.coords.latitude) + ' ' + NorS(pos.coords.latitude)
+            acc.innerHTML = `Accuracy ${Number(pos.coords.accuracy.toFixed(2).toString())} Meters`
+        }
+
+        function error(err) {
+            console.log(err)
+        }
+
+
     }
+
+
+    function EorW(data) {
+        return data > 0 ? 'E' : 'W'
+    }
+    function NorS(data) {
+        return data > 0 ? 'N' : 'S'
+    }
+
     getLocation()
 }

@@ -27,23 +27,48 @@
   background-color: red;
   margin-bottom: 10px;
 }
-.main .location {
+.main .loc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.main .loc .acc {
+  font-weight: 500;
+  font-size: 0.7em;
+  color: limegreen;
+}
+.main .loc > .calc {
+  background-color: #000;
+  color: white;
+  margin-top: 40px;
+  padding: 0.5em 1.1em;
+  font-weight: 500;
+  border-radius: 100vmax;
+  font-size: 0.7em;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.main .loc .location {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
 }
-.main .location > div {
+.main .loc .location > div {
   flex-grow: 1;
   text-align: center;
   display: flex;
   flex-direction: column;
 }
-.main .location > div .long, .main .location > div .lat {
-  font-size: 1.5em;
+.main .loc .location > div .long,
+.main .loc .location > div .lat {
+  font-size: 1.4em;
   font-weight: 500;
 }
-.main .location > div span.name {
+.main .loc .location > div span.name {
   font-size: 0.8rem;
   color: #888;
   font-weight: 500;

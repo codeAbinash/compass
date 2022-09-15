@@ -1,0 +1,77 @@
+.main {
+  min-height: 100vh;
+  gap: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.main .top {
+  width: 100%;
+}
+.main .top .location {
+  width: 100%;
+}
+.main .top .location .loc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.main .top .location .loc h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.main .top .location .accuracy {
+  color: limegreen;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-top: 20px;
+}
+.main .mid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column;
+}
+.main .mid #dist {
+  font-size: clamp(3rem, 15vw, 5rem);
+}
+.main .mid #speed {
+  font-size: clamp(2rem, 10vw, 3.5rem);
+}
+.main .dot {
+  height: 50px;
+  width: 50px;
+  background-color: limegreen;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px rgba(50, 205, 50, 0.5333333333), 0 0 0 20px rgba(50, 205, 50, 0.4666666667);
+  animation: 2s glow linear infinite;
+}
+.main .end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.main .end .time {
+  font-weight: 500;
+}
+
+@keyframes glow {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 0.7;
+  }
+  100% {
+    scale: 1;
+  }
+}

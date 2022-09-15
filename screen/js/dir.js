@@ -1,27 +1,32 @@
 export default function () {
-
-    document.getElementById('data').innerHTML = (localStorage.locationData)
-
-    console.log(localStorage.locationData)
-
-    let data
-    if (localStorage.locationData)
-        data = JSON.parse(localStorage.locationData)
-    else
-        data = []
-
     function getLocation() {
         const long = document.getElementById('long')
         const lat = document.getElementById('lat')
         if (navigator.geolocation) {
-            navigator.geolocation.watchPosition(pos => {
-                console.log(pos)
-                data.push({
-                    long: pos.coords.longitude,
-                    lat: pos.coords.latitude,
-                })
-                localStorage.locationData = JSON.stringify(data)
-            })
+            const options = {
+                enableHighAccuracy: true,
+                timeout: 60000
+                // maximumAge: 5000
+            };
+            function getCurrPos() {
+                navigator.geolocation.watchPosition(success, error, options)
+                setTimeout(() => {
+                    getCurrPos()
+                }, 5000);
+            }
+            getCurrPos()
+
+
+            function success(pos) {
+                // console.log(pos)
+                long.innerHTML += pos.coords.longitude + '<br>'
+                // lat.innerHTML += pos.coords.latitude + ' '
+            }
+            function error() {
+
+            }
+
+
         } else {
             long.textContent = '-'
             lat.textContent = '-'
