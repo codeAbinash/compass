@@ -14,7 +14,7 @@ loadFromRout()
 
 function loadScreen(src, dir = 0, animDur = 200) {
     main.style.transitionDuration = `${animDur}ms`
-    main.style.opacity = '0'
+    // main.style.opacity = '0'
     if (dir == 0)
         main.style.marginLeft = '-100%'
     else
@@ -24,8 +24,9 @@ function loadScreen(src, dir = 0, animDur = 200) {
         .then(data => data.text())
         .then(html => {
             setTimeout(() => {
-                main.style.opacity = '1'
-                main.style.transitionDuration = `${animDur / 10}ms`
+                // main.style.opacity = '1'
+                // main.style.transitionDuration = `${animDur / 10}ms`
+                // main.style.transitionDuration = `0ms`
                 main.style.marginLeft = '0%'
                 main.innerHTML = html
                 document.title = document.querySelector('#main title').textContent
