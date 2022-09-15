@@ -1,13 +1,13 @@
 export default function () {
+    const long = document.getElementById('long')
+    const lat = document.getElementById('lat')
+    const acc = document.getElementById('acc')
+    const speed = document.getElementById('speed')
+    const dist = document.getElementById('dist')
     let count = 0
     let totalDist = 0
     let lastPos
     function getLocation() {
-        const long = document.getElementById('long')
-        const lat = document.getElementById('lat')
-        const acc = document.getElementById('acc')
-        const speed = document.getElementById('speed')
-        const dist = document.getElementById('dist')
         const options = {
             enableHighAccuracy: true
             // timeout: 60000
