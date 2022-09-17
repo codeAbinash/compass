@@ -13,7 +13,7 @@ export default function () {
         }, false);
     } else {
         alert('Compass Not Available')
-    };
+    }
 
     function deviceOrientationHandler(alpha) {
         deg.innerHTML = `${getCompassHead(Math.abs(Math.ceil(alpha) - 360))}&deg`;
