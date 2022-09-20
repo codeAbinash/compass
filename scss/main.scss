@@ -2,6 +2,7 @@ body {
     overflow-x: hidden;
     background-color: var(--bg);
     color: var(--txt);
+    overscroll-behavior-y: contain;
     .icon {
         width: 150px;
 
