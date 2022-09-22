@@ -6,9 +6,18 @@ async function registerSW() {
             console.log('Service worker registered')
         } catch (error) {
             showResult("Error while registering: " + error.message);
+            console.log(error)
         }
     } else {
         showResult("Service workers API not available");
     }
 };
 registerSW()
+
+
+
+
+
+function showResult(data){
+    console.log(data)
+}
