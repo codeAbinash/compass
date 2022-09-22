@@ -48,16 +48,25 @@
             font-size: 0.7em;
             color: limegreen;
         }
-        >.calc {
-            background-color: #000;
-            color: white;
-            margin-top: 40px;
-            padding: 0.5em 1.1em;
-            font-weight: 500;
-            border-radius: 100vmax;
-            font-size: 0.7em;
-            cursor: pointer;
-            -webkit-tap-highlight-color: transparent;
+        .buttons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            >.calc {
+                background-color: #000;
+                color: white;
+                margin-top: 40px;
+                padding: 0.5em 1.1em;
+                font-weight: 500;
+                border-radius: 100vmax;
+                font-size: 0.7em;
+                cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+                // &.share{
+                //     background-color: var(--accent);
+                // }
+            }
         }
 
         .location {

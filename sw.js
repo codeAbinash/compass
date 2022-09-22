@@ -19,7 +19,6 @@ self.addEventListener('install', event => {
 
 
 self.addEventListener('fetch', event => {
-    console.log(event.request.url)
     if (staticAssets.includes(event.request.url)) // If there is static data available then don't load the data again
         event.respondWith(
             caches.match(event.request).then(cacheRes => {
