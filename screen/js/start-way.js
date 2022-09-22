@@ -27,7 +27,7 @@ export default function () {
             lat.innerHTML = makeDegMinSecStr(pos.coords.latitude) + ' ' + NorS(pos.coords.latitude)
             acc.innerHTML = `Accuracy ${Number(pos.coords.accuracy.toFixed(2).toString())} Meters`
             lastPos = lastPos ? lastPos : pos
-            speedAndDist(pos)
+            //speedAndDist(pos)
         }
 
         function error(err) {
@@ -37,13 +37,13 @@ export default function () {
     }
     getLocation()
 
-    // const lastTime 
+    // const lastTime
 
 
 
     function speedAndDist(pos) {
         totalDist =+ distance({ lat1: lastPos.coords.latitude, lon1: lastPos.coords.longitude }, { lat2: pos.coords.latitude, lon2: pos.coords.longitude })
-        dist.textContent = totalDist 
+        dist.textContent = totalDist
         // speed.innerHTML = distance({ lat1: 59.3293371, lon1: 13.4877472 }, { lat2: 59.3225525, lon2: 13.4619422 })
         lastPos = pos
     }

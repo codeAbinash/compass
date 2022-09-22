@@ -23,12 +23,14 @@ function loadScreen(src, dir = 0, animDur = 200) {
     const fetchedData = fetch(`./screen/page/${src}`)
         .then(data => data.text())
         .then(html => {
-            setTimeout(() => {
+            setTimeout(async () => {
                 // main.style.opacity = '1'
                 // main.style.transitionDuration = `${animDur / 10}ms`
                 // main.style.transitionDuration = `0ms`
                 main.style.marginLeft = '0%'
                 main.innerHTML = html
+                const ICONS = await import('./lib/fontawesome.js')
+                ICONS.default()
                 document.title = document.querySelector('#main title').textContent
                 loadScripts()
                 changeRout(src)
