@@ -1,1 +1,89 @@
-.main{min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:50px 20px 20px 20px}.main .deg p{font-size:2rem;font-weight:500}.main .compass{display:flex;justify-content:center;align-items:center;flex-direction:column}.main .compass>img{width:90%;display:block;margin-inline:auto}.main .compass .dot{height:20px;width:5px;background-color:red;margin-bottom:10px}.main .loc{width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px}.main .loc .acc{font-weight:500;font-size:.7em;color:#32cd32}.main .loc .buttons{display:flex;justify-content:center;align-items:center;gap:10px}.main .loc .buttons>.calc{background-color:#000;color:#fff;margin-top:40px;padding:.5em 1.1em;font-weight:500;border-radius:100vmax;font-size:.7em;cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0)}.main .loc .location{display:flex;width:100%;justify-content:center;align-items:center}.main .loc .location>div{flex-grow:1;text-align:center;display:flex;flex-direction:column}.main .loc .location>div .long,.main .loc .location>div .lat{font-size:1.4em;font-weight:500}.main .loc .location>div span.name{font-size:.8rem;color:#888;font-weight:500}.main .lastLink{font-size:.8rem;font-weight:500;color:#555}.main .lastLink a{color:#1e90ff}
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px 20px 20px;
+}
+.main .deg p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.main .compass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main .compass > img {
+  width: 90%;
+  display: block;
+  margin-inline: auto;
+}
+.main .compass .dot {
+  height: 20px;
+  width: 5px;
+  background-color: red;
+  margin-bottom: 10px;
+}
+.main .loc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.main .loc .acc {
+  font-weight: 500;
+  font-size: 0.7em;
+  color: limegreen;
+}
+.main .loc .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.main .loc .buttons > .calc {
+  background-color: #000;
+  color: white;
+  margin-top: 40px;
+  padding: 0.5em 1.1em;
+  font-weight: 500;
+  border-radius: 100vmax;
+  font-size: 0.7em;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.main .loc .location {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.main .loc .location > div {
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.main .loc .location > div .long,
+.main .loc .location > div .lat {
+  font-size: 1.4em;
+  font-weight: 600;
+}
+.main .loc .location > div span.name {
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 500;
+}
+.main .lastLink {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #555;
+}
+.main .lastLink a {
+  color: dodgerblue;
+}
