@@ -1,22 +1,14 @@
 const cacheName = 'compass'
 
-const fontCache = [
-    'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap',
-    'https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2',
-    'https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk.woff2',
-    'https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDD4Z1xlFQ.woff2',
-    'https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2',
-    'https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2',
-    'https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2',
-    'https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk.woff2',
-    'https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2',
-    'https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2',
+const fontCache = []
+const fallback = [
+    './screen/page/fb.html'
 ]
 
 const staticAssets = [
     './js/lib/fontawesome.js',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js'
-    , ...fontCache
+    , ...fontCache, ...fallback
 ]
 
 
@@ -32,13 +24,17 @@ self.addEventListener('install', event => {
 })
 
 
+
 self.addEventListener('fetch', event => {
-    if (staticAssets.includes(event.request.url)) // If there is static data available then don't load the data again
+    // if(localStorage.isOfflineOnce)
+    if (staticAssets.includes(event.request.url)) {
+        // If there is static data available then don't load the data again
         event.respondWith(
             caches.match(event.request).then(cacheRes => {
                 return cacheRes || fetch(event.request)
             })
         )
+    }
     else
         event.respondWith(
             // Check if there is the file available in static
@@ -51,6 +47,6 @@ self.addEventListener('fetch', event => {
                     })
                 })
                 return cacheRes || fetchURL
-            })
+            }).catch(()=>caches.match('./screen/page/fb.html'))
         )
 })
