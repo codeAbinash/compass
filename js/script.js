@@ -15,9 +15,6 @@ async function registerSW() {
 registerSW()
 
 
-
-
-
 function showResult(data){
     console.log(data)
 }
